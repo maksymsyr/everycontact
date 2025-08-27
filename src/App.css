@@ -28,6 +28,24 @@
   color: #61dafb;
 }
 
+.mainnav-large {
+  height: 90px;
+  font-size: 1.2rem;
+}
+
+.mainnav-large .navbar-brand {
+  font-size: 1.8rem; 
+  font-weight: bold;
+}
+
+.mainnav-large .nav-link,
+.mainnav-large .dropdown-item,
+.mainnav-large .btn {
+  font-size: 1.5rem; 
+  padding: 0.5rem 1rem; 
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +54,4 @@
     transform: rotate(360deg);
   }
 }
+
