@@ -24,7 +24,7 @@ function App() {
       <MainNav token={token} onLogout={handleLogout} />
       <div className="container mt-4">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/contacts/add" element={<AddContact />} />
           <Route path="/contacts/edit/:id" element={<EditContact />} />

@@ -1,9 +1,7 @@
-import { Button, Row, Col, Container, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Row, Col, Container, Image } from "react-bootstrap";
 import "./Home.css";
 
 export default function Home({ token }) {
-  const isLoggedIn = Boolean(token);
 
   return (
     <div className="home-background">
@@ -22,39 +20,6 @@ export default function Home({ token }) {
           Securely manage all your contacts in one place. 
           <strong> Add</strong>, <strong>Edit</strong>, and <strong>View</strong> your contacts effortlessly.
         </p>
-
-        <Row className="justify-content-center mb-5 fade-in delay-3">
-          <Col xs="auto">
-            <Button
-              as={Link}
-              to={isLoggedIn ? "/contacts/add" : "#"}
-              variant="primary"
-              size="lg"
-              className="btn-animated"
-              disabled={!isLoggedIn}
-            >
-              Add Contact
-            </Button>
-          </Col>
-          <Col xs="auto">
-            <Button
-              as={Link}
-              to={isLoggedIn ? "/contacts" : "#"}
-              variant="outline-primary"
-              size="lg"
-              className="btn-animated"
-              disabled={!isLoggedIn}
-            >
-              View Contacts
-            </Button>
-          </Col>
-        </Row>
-
-        {!isLoggedIn && (
-          <div className="text-danger fade-in delay-3">
-            ! Please log in to manage your contacts.
-          </div>
-        )}
 
         <Row className="justify-content-center fade-in delay-4">
           <Col lg={8}>

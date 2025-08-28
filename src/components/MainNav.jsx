@@ -1,7 +1,7 @@
   import { useState, useEffect } from "react";
   import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
   import { Link, useNavigate } from "react-router-dom";
-  import { readToken } from "../lib/authenticate";
+  import "./MainNav.css";
 
 export default function MainNav({ token, onLogout }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -51,26 +51,25 @@ export default function MainNav({ token, onLogout }) {
 
               <Nav className="ms-auto align-items-center">
                 {!token ? (
-                  <>
-                    <Button
-                      variant="outline-light"
-                      as={Link}
-                      to="/login"
-                      className="me-2"
-                      size="lg"
-                      onClick={() => setIsExpanded(false)}
-                    >
-                      Login
-                    </Button>
-                    <Button
-                      variant="light"
-                      as={Link}
-                      to="/register"
-                      size="lg"
-                      onClick={() => setIsExpanded(false)}
-                    >
-                      Register
-                    </Button>
+               <>
+              <Button
+                variant="outline-light"
+                as={Link}
+                to="/login"
+                className="me-2"
+                onClick={() => setIsExpanded(false)}
+              >
+                Login
+              </Button>
+              <Button
+                variant="light"
+                as={Link}
+                to="/register"
+                onClick={() => setIsExpanded(false)}
+              >
+                Register
+              </Button>
+
                   </>
                 ) : (
                   <>
