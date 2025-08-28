@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainNav from "./components/MainNav";
 import Home from "./components/Home";
@@ -16,7 +16,7 @@ function App() {
 
   function handleLogout() {
     removeToken(); // clears localStorage
-    setToken(null); // update state
+    setToken(null); // update state immediately
   }
 
   return (

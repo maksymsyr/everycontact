@@ -1,8 +1,10 @@
 import { Button, Row, Col, Container, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Home.css"; // new CSS for animations
+import "./Home.css";
 
-export default function Home() {
+export default function Home({ token }) {
+  const isLoggedIn = Boolean(token);
+
   return (
     <div className="home-background">
       <Container className="text-center py-5 home-container">
@@ -23,16 +25,36 @@ export default function Home() {
 
         <Row className="justify-content-center mb-5 fade-in delay-3">
           <Col xs="auto">
-            <Button as={Link} to="/contacts/add" variant="primary" size="lg" className="btn-animated">
+            <Button
+              as={Link}
+              to={isLoggedIn ? "/contacts/add" : "#"}
+              variant="primary"
+              size="lg"
+              className="btn-animated"
+              disabled={!isLoggedIn}
+            >
               Add Contact
             </Button>
           </Col>
           <Col xs="auto">
-            <Button as={Link} to="/contacts" variant="outline-primary" size="lg" className="btn-animated">
+            <Button
+              as={Link}
+              to={isLoggedIn ? "/contacts" : "#"}
+              variant="outline-primary"
+              size="lg"
+              className="btn-animated"
+              disabled={!isLoggedIn}
+            >
               View Contacts
             </Button>
           </Col>
         </Row>
+
+        {!isLoggedIn && (
+          <div className="text-danger fade-in delay-3">
+            ! Please log in to manage your contacts.
+          </div>
+        )}
 
         <Row className="justify-content-center fade-in delay-4">
           <Col lg={8}>
