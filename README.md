@@ -4,9 +4,9 @@ EveryContact is a web app for managing and viewing your contacts. It uses a sepa
 
 ## Usage
 
-- **Use Online:** Access the fully working version here: [EveryContact](https://<your-vercel-deployment-url>)
+- **Use Online:** Access the fully working version here: [EveryContact](https://everycontact.vercel.app/)
 - **Run Locally:**  
-  1. Clone the repo: `git clone git@github.com:maksymsyr/everycontact.git`  
+  1. Clone the repo: `git clone https://github.com/maksymsyr/everycontact.git`  
   2. Install dependencies: `npm install`  
   3. Start the app: `npm start`  
   4. Open `http://localhost:3000` in your browser  
