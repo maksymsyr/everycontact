@@ -2,11 +2,7 @@ import { jwtDecode } from "jwt-decode";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-// ---------------------
-// Token helpers
-// ---------------------
 function setToken(token) {
-  // ensure we strip any "JWT " prefix and replace with Bearer when using
   const cleanToken = token.replace(/^JWT\s+/i, "");
   console.log("Storing token:", cleanToken);
   localStorage.setItem("access_token", cleanToken);
@@ -33,17 +29,11 @@ export function removeToken() {
   localStorage.removeItem("access_token");
 }
 
-// ---------------------
-// Auth Header helper
-// ---------------------
 export function getAuthHeader() {
   const token = getToken();
   return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
-// ---------------------
-// API calls
-// ---------------------
 export async function authenticateUser(userEmail, password) {
   const res = await fetch(`${API_URL}/login`, {
     method: "POST",
@@ -77,9 +67,6 @@ export async function registerUser(userName, userEmail, password, password2) {
   }
 }
 
-// ---------------------
-// Forgot / Reset Password
-// ---------------------
 export async function requestPasswordReset(userEmail) {
   const res = await fetch(`${API_URL}/forgot-password`, {
     method: "POST",

@@ -18,7 +18,6 @@ export default function ForgotPassword() {
       const msg = await requestPasswordReset(userEmail);
       setSuccess(msg);
 
-      // Redirect to /reset-password after 2 seconds
       setTimeout(() => {
         navigate("/reset-password");
       }, 2000);

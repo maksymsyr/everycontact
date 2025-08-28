@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setToken, registerUser } from "../lib/authenticate";
 import "./Register.css";
-import { useEffect } from "react";
 
 
 export default function Register() {

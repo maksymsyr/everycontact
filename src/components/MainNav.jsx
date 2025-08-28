@@ -9,7 +9,7 @@ export default function MainNav({ token, onLogout }) {
 
   function logout() {
     setIsExpanded(false);
-    onLogout(); // clears token in App
+    onLogout();
     navigate("/login");
   }
 
@@ -52,37 +52,42 @@ export default function MainNav({ token, onLogout }) {
               )}
             </Nav>
 
-            <Nav className="ms-auto align-items-center">
-              {!token ? (
-                <>
-                  <Button
-                    variant="success"
-                    as={Link}
-                    to="/login"
-                    className="me-2 mb-2 mb-lg-0"
-                    onClick={() => setIsExpanded(false)}
-                  >
-                    Login
-                  </Button>
-                  <Button
-                    variant="light"
-                    as={Link}
-                    to="/register"
-                    className="mb-2 mb-lg-0"
-                    onClick={() => setIsExpanded(false)}
-                  >
-                    Register
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <span className="text-light me-4">Hello, {token.userName}</span>
-                  <Button variant="outline-light" onClick={logout}>
-                    Logout
-                  </Button>
-                </>
-              )}
-            </Nav>
+          <Nav className="ms-auto align-items-center flex-column flex-lg-row">
+            {!token ? (
+              <>
+                <Button
+                  variant="success"
+                  as={Link}
+                  to="/login"
+                  className="me-2 mb-2 mb-lg-0"
+                  size="sm"
+                  onClick={() => setIsExpanded(false)}
+                >
+                  Login
+                </Button>
+                <Button
+                  variant="light"
+                  as={Link}
+                  to="/register"
+                  className="mb-2 mb-lg-0"
+                  size="sm"
+                  onClick={() => setIsExpanded(false)}
+                >
+                  Register
+                </Button>
+              </>
+            ) : (
+              <>
+                <div className="text-light me-4 my-2 my-lg-0 d-block d-lg-inline">
+                  Hello, {token.userName}
+                </div>
+                <Button variant="outline-light" size="sm" onClick={logout}>
+                  Logout
+                </Button>
+              </>
+            )}
+          </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

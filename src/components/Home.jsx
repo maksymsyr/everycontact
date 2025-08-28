@@ -11,7 +11,7 @@ export default function Home({ token }) {
           alt="Contacts Illustration"
           fluid
           rounded
-          className="mb-4 mx-auto d-block shadow-lg fade-in"
+          className="mb-4 mx-auto d-block shadow-lg fade-in home-image"
           style={{ maxWidth: "500px" }}
         />
 

@@ -15,8 +15,8 @@ function App() {
   const [token, setToken] = useState(readToken());
 
   function handleLogout() {
-    removeToken(); // clears localStorage
-    setToken(null); // update state immediately
+    removeToken(); 
+    setToken(null); 
   }
 
   return (
