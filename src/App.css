@@ -28,22 +28,25 @@
   color: #61dafb;
 }
 
-.mainnav-large {
-  height: 90px;
-  font-size: 1.2rem;
+.mainnav {
+  height: 60px; /* normal navbar height */
 }
 
-.mainnav-large .navbar-brand {
-  font-size: 1.8rem; 
+.mainnav .navbar-brand {
+  font-size: 1.4rem; /* slightly bigger brand */
   font-weight: bold;
 }
 
-.mainnav-large .nav-link,
-.mainnav-large .dropdown-item,
-.mainnav-large .btn {
-  font-size: 1.5rem; 
-  padding: 0.5rem 1rem; 
+.mainnav .nav-link,
+.mainnav .dropdown-item {
+  font-size: 1rem; /* keep links readable but not huge */
 }
+
+.mainnav .btn {
+  font-size: 0.9rem; /* smaller buttons */
+  padding: 0.35rem 0.8rem;
+}
+
 
 
 @keyframes App-logo-spin {
