@@ -11,30 +11,16 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import { readToken, removeToken } from "./lib/authenticate";
 
-function AppWrapper() {
-  return (
-    <Router>
-      <App />
-    </Router>
-  );
-}
-
 function App() {
   const [token, setToken] = useState(readToken());
-  const location = useLocation();
-
-  useEffect(() => {
-    const currentToken = readToken();
-    setToken(currentToken);
-  }, [location]);
 
   function handleLogout() {
-    removeToken(); 
-    setToken(null); 
+    removeToken(); // clears localStorage
+    setToken(null); // update state immediately
   }
 
   return (
-    <>
+    <Router>
       <MainNav token={token} onLogout={handleLogout} />
       <div className="container mt-4">
         <Routes>
@@ -48,8 +34,8 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 
-export default AppWrapper;
+export default App;

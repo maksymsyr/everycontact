@@ -21,13 +21,6 @@ export default function Home({ token }) {
           <strong> Add</strong>, <strong>Edit</strong>, and <strong>View</strong> your contacts effortlessly.
         </p>
       </Container>
-
-      {/* Floating particles */}
-      <div className="particles">
-        {[...Array(30)].map((_, i) => (
-          <div key={i} className="particle" />
-        ))}
-      </div>
     </div>
   );
 }

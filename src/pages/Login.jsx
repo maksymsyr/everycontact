@@ -83,11 +83,12 @@ export default function Login({ setToken }) {
 
         <Button
           variant="primary"
-          size="lg"
           type="submit"
+          className="w-100 w-sm-auto"
         >
           Login
         </Button>
+
       </div>
 
     </Form>
