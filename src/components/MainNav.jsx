@@ -28,7 +28,7 @@ export default function MainNav({ onLogout }) {
         expand="lg"
         bg="dark"
         variant="dark"
-        className="fixed-top mainnav-large"
+        className="fixed-top"
         expanded={isExpanded}
       >
         <Container>

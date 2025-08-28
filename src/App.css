@@ -28,27 +28,6 @@
   color: #61dafb;
 }
 
-.mainnav {
-  height: 60px; /* normal navbar height */
-}
-
-.mainnav .navbar-brand {
-  font-size: 1.4rem; /* slightly bigger brand */
-  font-weight: bold;
-}
-
-.mainnav .nav-link,
-.mainnav .dropdown-item {
-  font-size: 1rem; /* keep links readable but not huge */
-}
-
-.mainnav .btn {
-  font-size: 0.9rem; /* smaller buttons */
-  padding: 0.35rem 0.8rem;
-}
-
-
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
