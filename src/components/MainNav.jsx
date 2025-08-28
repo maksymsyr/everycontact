@@ -53,7 +53,7 @@ export default function MainNav({ token, onLogout }) {
                 {!token ? (
                <>
               <Button
-                variant="outline-light"
+                variant="success"
                 as={Link}
                 to="/login"
                 className="me-2"

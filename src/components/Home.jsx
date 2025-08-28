@@ -20,14 +20,6 @@ export default function Home({ token }) {
           Securely manage all your contacts in one place. 
           <strong> Add</strong>, <strong>Edit</strong>, and <strong>View</strong> your contacts effortlessly.
         </p>
-
-        <Row className="justify-content-center fade-in delay-4">
-          <Col lg={8}>
-            <p className="text-light">
-              EveryContact keeps your data private and secure. Start organizing your contacts today and never lose track of anyone again.
-            </p>
-          </Col>
-        </Row>
       </Container>
 
       {/* Floating particles */}
