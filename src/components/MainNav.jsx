@@ -81,7 +81,7 @@ export default function MainNav({ token, onLogout }) {
                 <div className="text-light me-4 my-2 my-lg-0 d-block d-lg-inline">
                   Hello, {token.userName}
                 </div>
-                <Button variant="outline-light" size="sm" onClick={logout}>
+                <Button variant="outline-info" size="sm" onClick={logout}>
                   Logout
                 </Button>
               </>
